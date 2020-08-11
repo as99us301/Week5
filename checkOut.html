@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,user-scalable-no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/checkOut.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Sweetaste* 確認結帳</title>
+</head>
+
+
+<body>
+    <div class="container">
+        <!--LOGO&導覽列-->
+        <div class="header">
+            <a class="hamburger" href="#">
+                <img data-aos="fade-down"
+                    src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/dehaze-24px.png?raw=true"
+                    alt="">
+            </a>
+
+            <h1 class="logo" data-aos="fade-down">
+                <a href="index.html">Sweetaste*</a>
+            </h1>
+
+            <div class="navbar">
+                <ul class="navbar-nav" data-aos="fade-down">
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">甜點</a></li>
+                    <li><a href="#">登入</a></li>
+                </ul>
+                <a href="#" data-aos="fade-down">
+                    <span class="material-icons cart">
+                    shopping_cart
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="main">
+            <div class="infoInput" data-aos="zoom-in" >
+                <div class="invoice">
+                    <div class="titleBar">
+                        <h3>發票</h3>
+                        <img src="img/loading.svg" alt="">
+                    </div>
+
+                    <div class="chooseType">
+                        <button class="digitalInvoice">
+                            電子發票
+                        </button>
+                        <button class="sendInvoice">
+                            郵寄發票
+                        </button>
+                    </div>
+                    <div class="mailInput">
+                        <p>電子郵件信箱</p>
+                        <form action="#">
+                            <input type="text" id="mail">
+                        </form>
+                    </div>
+                    <div class="taxIDinput">
+                        <p>統一編號（選填）</p>
+                        <form action="#">
+                            <input type="text" id="taxID">
+                        </form>
+                    </div>
+                </div>
+                <button class="send">
+                    確認結帳
+                </button>
+            </div>
+            <div class="buyList">
+
+                <div class="cost" data-aos="fade-right">
+                    <h4>訂單摘要</h4>
+
+                    <ul class="costList">
+                        <li>
+                            <p>小計</p>
+                            <p>NT$ 2,700</p>
+                        </li>
+                        <li>
+                            <p>運費</p>
+                            <p>NT$ 300</p>
+                        </li>
+                        <li class="total">
+                            <p>總計</p>
+                            <p>NT$ 3,000</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="cart" data-aos="fade-right">
+                    <h4>購物清單</h4>
+
+                    <ul class="cartList">
+                        <li>
+                            <div class="productImg">
+                                <img src="img/01.jpg" alt="">
+                            </div>
+                            <div class="productInfo">
+                                <p class="name">焦糖馬卡龍（2）</p>
+                                <p class="price">NT$ 900</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="productImg">
+                                <img src="img/02.jpg" alt="">
+                            </div>
+                            <div class="productInfo">
+                                <p class="name">焦糖馬卡龍（2）</p>
+                                <p class="price">NT$ 900</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="productImg">
+                                <img src="img/03.jpg" alt="">
+                            </div>
+                            <div class="productInfo">
+                                <p class="name">焦糖馬卡龍（2）</p>
+                                <p class="price">NT$ 900</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <!--訂閱郵件-->
+        <div class="subscribeBG" data-aos="flip-down">
+            <div class="subscribe">
+                <!--訂閱你我的甜蜜郵件&Logo-->
+                <div class="logoDes">
+                    <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-light.svg"
+                        alt="circleLogo">
+                    <h2>訂閱你我的甜蜜郵件</h2>
+                </div>
+                <!--Email輸入表單-->
+                <div class="mailForm">
+                    <span class="material-icons mailIcon">
+                        mail
+                    </span>
+                    <form action="#">
+                        <input type="text" id="mail">
+                    </form>
+                    <button class="send">
+                        <span class="material-icons sendIcon">
+                            arrow_forward
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--關於我們-->
+        <div class="aboutUsBG">
+            <div class="aboutUs">
+                <div class="shopInfo">
+                    <!--小logo&電話&住址-->
+                    <div class="logoAddress" data-aos="zoom-out-right">
+                        <img class="logoImg"
+                            src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-sm-dark.svg"
+                            alt="logo">
+                        <ul class="telAddress" data-aos="zoom-out-right">
+                            <li>07-1234-5678</li>
+                            <li>sweetaste@email.com</li>
+                            <li>800 高雄市新興區幸福路 520 號</li>
+                        </ul>
+                    </div>
+                    <!--今天是個-->
+                    <img class="slogan" data-aos="zoom-out"
+                        src="https://raw.githubusercontent.com/EasonChang0115/challenge-hex/master/src/images/footer_text_img.svg"
+                        alt="">
+                </div>
+                <!--聯絡方式&Copyright-->
+                <div class="snsLink">
+                    <ul class="icon">
+                        <li>
+                            <a href="#">
+                                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/ic-line%40.svg"
+                                    alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/ic-facebook.svg"
+                                    alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyRight">© 2018 Sweetaste* All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--載入aos&漢堡選單用jQuery-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+        });
+        $('.hamburger').click(function () {
+            $('.navbar-nav').toggleClass('active')
+        });
+    </script>
+</body>
+
+</html>

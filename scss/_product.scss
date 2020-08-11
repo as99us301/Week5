@@ -1,0 +1,149 @@
+/*選單&馬卡龍們*/
+/*左側選單*/
+.banner{
+    margin-bottom: 60px;
+    @include small(){
+        margin-bottom: 0;
+    }
+}
+.main{
+    display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+    .menu{
+        font-size: 24px;
+        line-height: 33px;
+        width: 32%;
+        margin-bottom: 60px;
+        h2{
+            background: $deepGreen;
+            padding: 16px 0 16px 0;
+            color: $lightGreen;
+        }
+        li{
+            border: $borderstyle;
+            a{
+                color: $deepGreen;
+                padding: 14px 0px 14px 0px;
+                &:hover{
+                    background: $lightGreen;
+                }
+            }
+        }
+        @include large(){
+            width: 300px;
+        }
+        @include medium(){
+            width: 100%;
+            margin-bottom: 60px;
+        }
+        @include small(){
+            margin-bottom: 30px;
+        }
+        
+    }
+    /*馬卡龍們*/
+    .product{
+        max-width: 66%;
+        .allItems{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .listItems{	
+                position: relative;
+                .today{	
+                    position: absolute;
+                    left: 20px;
+                    top: 0px;
+                    background: $deepGreen;
+                    color: $lightGreen;
+                    p{
+                        writing-mode: vertical-lr;
+                        font-size: 17px;	
+                        letter-spacing: 2px;
+                        padding: 15px 10px 15px 10px;
+                    }
+                }
+                .like{
+                    position: absolute;
+                    right: 22px;
+                    top: 19px;
+                }
+                .button{
+                    font-family: $font-family;
+                    font-weight: bold;
+                    font-size: 24px;
+                    background: $lightGreen;
+                    border: 0;
+                    color: $deepGreen;
+                    padding: 16px 90px 16px 90px;
+                    margin-bottom: 20px;
+                    cursor: pointer;
+
+                    &:hover{
+                        background: $deepGreen;
+                        color: $lightGreen;
+                    }
+                }
+            }
+            .intro {
+                display: flex;
+                .name , .price{
+                    color: $deepGreen;
+                    font-size: 20px;
+                    line-height: 28px;
+                    border: $borderstyle;
+                    padding: 14px 33px 14px 33px;
+                }
+                .price{
+                    padding: 14px 24px 14px 24px;
+                }
+            }
+            @include medium(){
+                justify-content: center;
+            }
+            @include small(){
+                justify-content: center;
+            }
+            
+        }
+        @include medium(){
+            width: 85%;
+        }
+    }
+    .pages {
+        display: flex;
+        justify-content: flex-end;
+        margin: 30px 0 60px 0;
+        li{
+            border: $borderstyle;
+        }
+        .number{
+            font-size: 20px;
+            line-height: 28px;
+            a{	
+                color: $deepGreen;
+                padding: 19px 27px 19px 27px;
+                &:hover{
+                    background: $deepGreen;
+                    color: $lightGreen;
+                }
+            }
+        }
+        .prew img, .next img{
+            padding: 20px;
+            &:hover{
+                background: white;
+            }            
+        }
+        @include large(){
+            justify-content: center;
+        }
+        @include small(){
+            margin: 15px 0 30px 0;
+        }
+    }
+    @include large(){
+		justify-content: space-around;
+    }
+}

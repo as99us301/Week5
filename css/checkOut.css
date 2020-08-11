@@ -1,0 +1,666 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+size 14 / 16 / 18 / 20 / 24
+height  22 / 24 / 26 / 28 / 33
+*/
+/*共用區*/
+body {
+  text-align: center;
+  font-family: Microsoft JhengHei;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+@media (max-width: 975px) {
+  .container {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+/*header部分*/
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0 30px 0;
+  position: relative;
+}
+
+.header .hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header .hamburger {
+    display: block;
+  }
+}
+
+.header .logo a {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg);
+  background-size: 210px 40px;
+  width: 210px;
+  height: 40px;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .header .logo a {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-sm-dark.svg);
+    background-size: 160px 25px;
+    width: 160px;
+    height: 25px;
+  }
+}
+
+.header .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .navbar .navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 0px;
+}
+
+.header .navbar .navbar-nav a {
+  font-size: 18px;
+  line-height: 26px;
+  padding: 10px 30px 10px 30px;
+  color: #3F5D45;
+}
+
+.header .navbar .navbar-nav a:hover {
+  background: #EAF0ED;
+}
+
+@media (max-width: 768px) {
+  .header .navbar .navbar-nav {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.header .navbar .active {
+  max-height: 200px;
+  z-index: 5;
+}
+
+.header .navbar .cart {
+  display: block;
+  padding: 10px 0 10px 39px;
+  color: #3F5D45;
+}
+
+.header .navbar .cart:hover {
+  background: #EAF0ED;
+}
+
+@media (max-width: 768px) {
+  .header .navbar .cart {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 30px;
+  }
+}
+
+/*footer部分*/
+.subscribeBG {
+  background: #3F5D45;
+}
+
+.subscribe {
+  margin: 0 auto;
+  max-width: 780px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.subscribe .logoDes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0 30px 0;
+}
+
+.subscribe .logoDes img {
+  height: 36px;
+  width: 36px;
+}
+
+.subscribe .logoDes h2 {
+  font-size: 24px;
+  line-height: 33px;
+  color: #EAF0ED;
+  margin-left: 20px;
+  font-weight: 550;
+}
+
+@media (max-width: 768px) {
+  .subscribe .logoDes {
+    margin-bottom: 30px;
+  }
+}
+
+.subscribe .mailForm {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px 0 30px 0;
+}
+
+.subscribe .mailForm .mailIcon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  color: #3F5D45;
+}
+
+.subscribe .mailForm input {
+  height: 56px;
+  border: 0;
+  width: 232px;
+  padding: 0 20px 0 64px;
+  background-color: #EAF0ED;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 975px) {
+  .subscribe .mailForm input {
+    width: 182px;
+  }
+}
+
+.subscribe .mailForm .send {
+  border: 0;
+  cursor: pointer;
+  background-color: #FFE180;
+  padding: 0 20px 0 20px;
+}
+
+.subscribe .mailForm .send .sendIcon {
+  color: #3F5D45;
+}
+
+@media (max-width: 721px) {
+  .subscribe .mailForm {
+    margin: 0 0 30px 0;
+  }
+}
+
+@media (max-width: 975px) {
+  .subscribe {
+    padding: 0 8% 0 8%;
+  }
+}
+
+@media (max-width: 721px) {
+  .subscribe {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.aboutUsBG {
+  margin: 0 auto;
+  background: #EAF0ED;
+}
+
+.aboutUs {
+  margin: 0 auto;
+  max-width: 780px;
+}
+
+.aboutUs .shopInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.aboutUs .shopInfo .logoAddress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.aboutUs .shopInfo .logoAddress .logoImg {
+  height: 27px;
+  width: 171px;
+  margin: 38px 0 0 0;
+}
+
+@media (max-width: 480px) {
+  .aboutUs .shopInfo .logoAddress .logoImg {
+    margin: 38px 0 40px 0;
+  }
+}
+
+.aboutUs .shopInfo .logoAddress .telAddress {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  color: #3F5D45;
+  font-weight: 600;
+}
+
+.aboutUs .shopInfo .slogan {
+  width: 70px;
+  margin-top: 38px;
+}
+
+@media (max-width: 480px) {
+  .aboutUs .shopInfo .slogan {
+    display: none;
+  }
+}
+
+.aboutUs .snsLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.aboutUs .snsLink .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.aboutUs .snsLink .icon img {
+  height: 36px;
+  width: 36px;
+  padding-right: 8px;
+}
+
+@media (max-width: 480px) {
+  .aboutUs .snsLink .icon {
+    margin-bottom: 23px;
+  }
+}
+
+.aboutUs .snsLink .copyRight {
+  color: #3F5D45;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .aboutUs .snsLink {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (max-width: 975px) {
+  .aboutUs {
+    padding: 0 8% 0 8%;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutUs {
+    margin-left: 5%;
+  }
+}
+
+.main {
+  width: 820px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.main .invoice {
+  background: #3F5D45;
+  padding: 30px 40px 30px 40px;
+}
+
+.main .invoice .titleBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .invoice .titleBar h3 {
+  font-size: 36px;
+  color: #EAF0ED;
+  margin-bottom: 30px;
+}
+
+.main .invoice .titleBar img {
+  width: 180px;
+  height: 35px;
+}
+
+.main .invoice .chooseType {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 35px;
+}
+
+.main .invoice .chooseType .digitalInvoice, .main .invoice .chooseType .sendInvoice {
+  border: 0;
+  cursor: pointer;
+  font-family: Microsoft JhengHei;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #EAF0ED;
+  border: 1px solid #EAF0ED;
+  padding: 14px 56px 14px 57px;
+  color: #3F5D45;
+}
+
+.main .invoice .chooseType .digitalInvoice:hover, .main .invoice .chooseType .sendInvoice:hover {
+  background-color: #3F5D45;
+  color: #EAF0ED;
+}
+
+@media (max-width: 768px) {
+  .main .invoice .chooseType .digitalInvoice, .main .invoice .chooseType .sendInvoice {
+    width: 50%;
+  }
+}
+
+.main .invoice .mailInput p, .main .invoice .taxIDinput p {
+  font-size: 20px;
+  line-height: 28px;
+  color: #EAF0ED;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.main .invoice .mailInput input, .main .invoice .taxIDinput input {
+  height: 56px;
+  border: 0;
+  width: 380px;
+  background-color: #EAF0ED;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .main .invoice .mailInput input, .main .invoice .taxIDinput input {
+    width: 100%;
+  }
+}
+
+.main .send {
+  border: 0;
+  cursor: pointer;
+  font-family: Microsoft JhengHei;
+  font-weight: bold;
+  background-color: #FFE180;
+  font-size: 24px;
+  line-height: 33px;
+  padding: 19px 190px 19px 190px;
+  color: #3F5D45;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .main .send {
+    width: 100%;
+  }
+}
+
+.main .buyList .cost h4, .main .buyList .cart h4 {
+  font-size: 24px;
+  line-height: 33px;
+  background: #EAF0ED;
+  padding: 16px 104px 16px 104px;
+  color: #8DA291;
+}
+
+.main .buyList .costList {
+  border: 1px solid #EAF0ED;
+  margin-bottom: 20px;
+}
+
+.main .buyList .costList li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px;
+  color: #8DA291;
+  font-weight: lighter;
+}
+
+.main .buyList .costList .total {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.main .buyList .cartList {
+  border: 1px solid #EAF0ED;
+}
+
+.main .buyList .cartList li {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #8DA291;
+}
+
+.main .buyList .cartList li .productImg {
+  width: 120px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.main .buyList .cartList li img {
+  margin: -40px 0;
+}
+
+.main .buyList .cartList li:nth-child(3) img {
+  margin: 0;
+}
+
+.main .buyList .cartList li .productInfo {
+  padding: 15px 0 15px 20px;
+  text-align: left;
+}
+
+.main .buyList .cartList li .name {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.main .buyList .cartList li .price {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@media (max-width: 768px) {
+  .main .buyList .cartList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .main .buyList {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main .buyList {
+    display: none;
+  }
+}
+
+@media (max-width: 975px) {
+  .main {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main .infoInput {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=checkOut.css.map */

@@ -1,0 +1,173 @@
+@mixin buttonStyle {
+    border: 0;
+    cursor: pointer;    
+    font-family: $font-family;    
+    font-weight: bold;
+}
+
+
+.main{
+    width: $containerWidth - 120px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    .invoice{
+        background: $deepGreen;
+        padding: 30px 40px 30px 40px;
+
+        .titleBar{
+            display: flex;
+            justify-content: space-between;
+            h3{
+                font-size: 36px;
+                color: $lightGreen;
+                margin-bottom: 30px;
+            }
+            img{
+                width: 180px;
+                height: 35px;
+            }
+        }
+        
+        .chooseType{
+            display: flex;
+            margin-bottom: 35px;
+            .digitalInvoice, .sendInvoice{
+                @include buttonStyle();
+                font-size: 20px;
+                background-color: $lightGreen;
+                border: $borderstyle;
+                padding: 14px 56px 14px 57px;
+                color: $deepGreen;
+                &:hover{
+                    background-color: $deepGreen;
+                    color: $lightGreen;
+                }
+                @include medium(){
+                    width: 50%;
+                }
+            }
+        }
+
+        .mailInput, .taxIDinput{
+            p{
+                font-size: 20px;
+                line-height: 28px;
+                color: $lightGreen;
+                margin-bottom: 8px;
+                text-align: left;
+            }
+            input{
+                height: 56px;
+                border: 0;
+                width: 380px;
+                background-color: $lightGreen;
+                font-size: $fontSize-S;
+                line-height: $lineHeight-S;
+                margin-bottom: 25px;
+                @include medium(){
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .send{
+        @include buttonStyle();
+        background-color: #FFE180;
+        font-size: 24px;
+        line-height: 33px;
+        padding: 19px 190px 19px 190px;
+        color: $deepGreen;
+        margin-bottom: 40px;
+        @include medium(){
+            width: 100%;
+        }
+    }
+
+    .buyList{
+        .cost, .cart{
+            h4{
+                font-size: 24px;
+                line-height: 33px;
+                background: $lightGreen;
+                padding: 16px 104px 16px 104px;
+                color: #8DA291;
+            }
+        }
+        .costList{
+            border: $borderstyle;
+            margin-bottom: 20px;
+            li{
+                 display: flex;
+                 justify-content: space-between;
+                 margin: 20px;
+                 color:#8DA291;
+                 font-weight: lighter;
+            }
+            .total{
+                 font-size: 20px;
+                 font-weight: bold;
+            }
+            
+        }
+        .cartList{
+            border: $borderstyle;
+
+            li{
+                margin: 20px;               
+                display: flex;
+                justify-content: center;
+                color: #8DA291;
+                
+                .productImg{
+                    width: 120px;
+                    height: 80px;
+                    overflow: hidden;
+                    
+                }
+                img{
+                        margin: -40px 0;
+                    }
+                &:nth-child(3) img {
+                    margin: 0;
+                }
+                .productInfo{
+                    padding: 15px 0 15px 20px;
+                    text-align: left;
+                }
+                .name{
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .price{
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+            }
+            @include medium(){
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+        }
+        @include medium(){
+            width: 100%;
+        }
+        @include extraSmall(){
+            display: none;
+        }
+    }
+
+    @include large(){
+        width: 100%;
+    }
+
+    .infoInput{
+        @include medium(){
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,265 @@
+/*共用區*/
+body{
+	text-align: center;
+	font-family: $font-family;
+	font-weight: bold;
+}
+
+.container{
+	max-width: $containerWidth;
+    margin: 0 auto;
+    @include large(){
+		max-width: 95%;
+    }
+    @include medium(){
+        max-width: 100%;
+    }
+}
+
+a{
+	display: block;	
+    text-decoration: none;
+}
+
+/*header部分*/
+.header{
+    display: flex;
+	justify-content: space-between;
+    align-items: center;
+	padding: 30px 0 30px 0;	
+    position: relative;
+    
+    .hamburger{
+        display: none;
+        @include medium(){
+            display: block;
+        }
+    }
+
+    .logo a{
+        background-image:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg);
+        background-size: 210px 40px;
+        width: 210px;
+        height: 40px;
+        text-indent: 101%;
+        white-space: nowrap;
+        overflow: hidden;  
+        @include medium(){
+            background-image:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-sm-dark.svg);
+            background-size: 160px 25px;
+            width: 160px;
+            height: 25px;
+        }
+    }
+    .navbar{
+        display: flex;
+
+        .navbar-nav{
+            display: flex;
+            max-height: 0px;
+
+            a{
+                font-size: $fontSize-M;
+                line-height: $lineHeight-M;
+                padding: 10px 30px 10px 30px;
+                color: $deepGreen;
+
+                &:hover{
+                    background: $lightGreen;
+                }
+            }
+
+            @include medium(){
+                position: absolute;
+                left: 0;
+                top: 100%;
+                width: 100%;
+                overflow: hidden;
+                background: white;
+                flex-direction: column;
+            }
+        }
+
+        .active {
+            max-height: 200px;
+            z-index: 5;
+        }
+
+        .cart{
+            display: block;
+            padding: 10px 0 10px 39px;
+            color: $deepGreen;
+            &:hover{
+                background: $lightGreen;
+            }
+            @include medium(){
+                padding: 0;
+            }
+        }
+    }
+    @include medium(){
+        padding: 30px;
+    }
+}
+
+/*footer部分*/
+.subscribeBG{
+    background: $deepGreen;
+}
+
+.subscribe {	
+    margin: 0 auto;
+    max-width: $footerWidth;
+    display: flex;	
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .logoDes{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px 0 30px 0;
+
+        img{
+            height: $iconSize;
+            width: $iconSize;
+        }
+
+        h2{
+            font-size: $fontSize-XL;
+            line-height: $lineHeight-XL;
+            color: $lightGreen;
+            margin-left: 20px;
+            font-weight: 550;
+        }
+        @include medium(){
+            margin-bottom: 30px;
+        }
+    }
+
+    .mailForm{
+        position: relative;
+        display: flex;
+        margin: 30px 0 30px 0;
+
+        .mailIcon{
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 16px;
+            left: 20px;
+            color: $deepGreen;
+        }
+
+        input{
+            height: 56px;
+            border: 0;
+            width: 232px;
+            padding: 0 20px 0 64px;
+            background-color: $lightGreen;
+            font-size: $fontSize-S;
+            line-height: $lineHeight-S;
+            @include large(){
+                width: 182px;
+            }
+        }
+
+        .send{
+            border: 0;
+            cursor: pointer;
+            background-color: #FFE180;
+            padding: 0 20px 0 20px;
+            .sendIcon{
+                color: $deepGreen;
+            }
+        }
+        @include small(){
+            margin: 0 0 30px 0;
+        }
+    }
+    @include large(){
+		padding: 0 8% 0 8%;
+    }
+    @include small(){
+        justify-content: center;
+    }
+}    
+
+.aboutUsBG{
+    margin: 0 auto;
+    background: $lightGreen;
+}
+
+.aboutUs{
+    margin: 0 auto;
+    max-width: $footerWidth;
+    .shopInfo{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        .logoAddress{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .logoImg{
+                height: 27px;
+                width: 171px;		
+                margin: 38px 0 0 0;
+                @include extraSmall(){
+                    margin: 38px 0 40px 0;
+                }
+            }
+            .telAddress{
+                font-size: $fontSize-S;
+                line-height: $lineHeight-S;
+                text-align: left;
+                color: $deepGreen;
+                font-weight: 600;
+            }
+
+        }
+
+        .slogan{
+            width: 70px;
+            margin-top: 38px;
+            @include extraSmall(){
+                display: none;                
+            }
+        }
+    }
+    .snsLink{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 30px;
+
+        .icon{
+            display: flex;
+            img{
+                height: $iconSize;
+                width: $iconSize;
+                padding-right: 8px;
+            }
+            @include extraSmall(){
+                margin-bottom: 23px;
+            }
+        }
+        .copyRight{
+            color: $deepGreen;
+            font-size: $fontSize-XS;
+            line-height: $lineHeight-XS;
+            font-weight: 600;
+        }
+        @include extraSmall(){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    @include large(){
+		padding: 0 8% 0 8%;
+    }
+    @include extraSmall(){
+		margin-left: 5%;       
+    }
+}
