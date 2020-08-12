@@ -542,7 +542,7 @@ a {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
-  font-size: 17px;
+  font-size: 18px;
   letter-spacing: 2px;
   padding: 15px 10px 15px 10px;
 }
@@ -554,15 +554,15 @@ a {
 }
 
 .main .product .allItems .listItems .button {
+  border: 0;
+  cursor: pointer;
   font-family: Microsoft JhengHei;
   font-weight: bold;
   font-size: 24px;
   background: #EAF0ED;
-  border: 0;
   color: #3F5D45;
   padding: 16px 90px 16px 90px;
   margin-bottom: 20px;
-  cursor: pointer;
 }
 
 .main .product .allItems .listItems .button:hover {

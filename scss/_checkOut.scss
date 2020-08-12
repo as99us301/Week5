@@ -1,15 +1,6 @@
-@mixin buttonStyle {
-    border: 0;
-    cursor: pointer;    
-    font-family: $font-family;    
-    font-weight: bold;
-}
-
-
 .main{
-    width: $containerWidth - 120px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 60px;
     .invoice{
@@ -35,7 +26,7 @@
             margin-bottom: 35px;
             .digitalInvoice, .sendInvoice{
                 @include buttonStyle();
-                font-size: 20px;
+                font-size: $fontSize-L;
                 background-color: $lightGreen;
                 border: $borderstyle;
                 padding: 14px 56px 14px 57px;
@@ -52,8 +43,8 @@
 
         .mailInput, .taxIDinput{
             p{
-                font-size: 20px;
-                line-height: 28px;
+                font-size: $fontSize-L;
+                line-height: $lineHeight-L;
                 color: $lightGreen;
                 margin-bottom: 8px;
                 text-align: left;
@@ -61,39 +52,46 @@
             input{
                 height: 56px;
                 border: 0;
-                width: 380px;
+                width: 350px;
                 background-color: $lightGreen;
                 font-size: $fontSize-S;
-                line-height: $lineHeight-S;
                 margin-bottom: 25px;
+                padding: 0 20px 0 20px; 
                 @include medium(){
-                    width: 100%;
+                    width: 93%;
                 }
-            }
+                @include extraSmall(){
+                    width: 90%;
+                }
+            }  
+           
         }
+        
     }
 
     .send{
         @include buttonStyle();
-        background-color: #FFE180;
-        font-size: 24px;
-        line-height: 33px;
+        background-color: $yellow;
+        font-size: $fontSize-XL;
         padding: 19px 190px 19px 190px;
         color: $deepGreen;
         margin-bottom: 40px;
         @include medium(){
             width: 100%;
         }
+        @include extraSmall(){
+            margin-bottom: 0px;
+        }
     }
 
     .buyList{
         .cost, .cart{
             h4{
-                font-size: 24px;
-                line-height: 33px;
+                font-size: $fontSize-XL;
+                line-height: $lineHeight-XL;
                 background: $lightGreen;
                 padding: 16px 104px 16px 104px;
-                color: #8DA291;
+                color: $darkGreen;
             }
         }
         .costList{
@@ -103,11 +101,12 @@
                  display: flex;
                  justify-content: space-between;
                  margin: 20px;
-                 color:#8DA291;
+                 color: $darkGreen;
                  font-weight: lighter;
             }
             .total{
-                 font-size: 20px;
+                 font-size: $fontSize-L;
+                 line-height: $lineHeight-L;
                  font-weight: bold;
             }
             
@@ -119,17 +118,16 @@
                 margin: 20px;               
                 display: flex;
                 justify-content: center;
-                color: #8DA291;
+                color: $darkGreen;
                 
                 .productImg{
                     width: 120px;
                     height: 80px;
                     overflow: hidden;
-                    
                 }
                 img{
-                        margin: -40px 0;
-                    }
+                    margin: -40px 0;
+                }
                 &:nth-child(3) img {
                     margin: 0;
                 }
@@ -138,12 +136,12 @@
                     text-align: left;
                 }
                 .name{
-                    font-size: 16px;
-                    line-height: 24px;
+                    font-size: $fontSize-S;
+                    line-height: $lineHeight-S;
                 }
                 .price{
-                    font-size: 20px;
-                    line-height: 28px;
+                    font-size: $fontSize-L;
+                    line-height: $lineHeight-L;
                 }
             }
             @include medium(){
@@ -169,5 +167,8 @@
         @include medium(){
             width: 100%;
         }
+    }
+    @include extraSmall(){
+        margin-bottom: 0px;
     }
 }

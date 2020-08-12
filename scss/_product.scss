@@ -11,8 +11,8 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
     .menu{
-        font-size: 24px;
-        line-height: 33px;
+        font-size: $fontSize-XL;
+        line-height: $lineHeight-XL;
         width: 32%;
         margin-bottom: 60px;
         h2{
@@ -59,7 +59,7 @@
                     color: $lightGreen;
                     p{
                         writing-mode: vertical-lr;
-                        font-size: 17px;	
+                        font-size: $fontSize-M;	
                         letter-spacing: 2px;
                         padding: 15px 10px 15px 10px;
                     }
@@ -70,15 +70,12 @@
                     top: 19px;
                 }
                 .button{
-                    font-family: $font-family;
-                    font-weight: bold;
-                    font-size: 24px;
+                    @include buttonStyle();
+                    font-size: $fontSize-XL;
                     background: $lightGreen;
-                    border: 0;
                     color: $deepGreen;
                     padding: 16px 90px 16px 90px;
                     margin-bottom: 20px;
-                    cursor: pointer;
 
                     &:hover{
                         background: $deepGreen;
@@ -90,8 +87,8 @@
                 display: flex;
                 .name , .price{
                     color: $deepGreen;
-                    font-size: 20px;
-                    line-height: 28px;
+                    font-size: $fontSize-L;
+                    line-height: $lineHeight-L;
                     border: $borderstyle;
                     padding: 14px 33px 14px 33px;
                 }
@@ -119,8 +116,8 @@
             border: $borderstyle;
         }
         .number{
-            font-size: 20px;
-            line-height: 28px;
+            font-size: $fontSize-L;
+            line-height: $lineHeight-L;
             a{	
                 color: $deepGreen;
                 padding: 19px 27px 19px 27px;

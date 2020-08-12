@@ -443,13 +443,11 @@ a {
 }
 
 .main {
-  width: 820px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 60px;
@@ -521,16 +519,22 @@ a {
 .main .invoice .mailInput input, .main .invoice .taxIDinput input {
   height: 56px;
   border: 0;
-  width: 380px;
+  width: 350px;
   background-color: #EAF0ED;
   font-size: 16px;
-  line-height: 24px;
   margin-bottom: 25px;
+  padding: 0 20px 0 20px;
 }
 
 @media (max-width: 768px) {
   .main .invoice .mailInput input, .main .invoice .taxIDinput input {
-    width: 100%;
+    width: 93%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main .invoice .mailInput input, .main .invoice .taxIDinput input {
+    width: 90%;
   }
 }
 
@@ -541,7 +545,6 @@ a {
   font-weight: bold;
   background-color: #FFE180;
   font-size: 24px;
-  line-height: 33px;
   padding: 19px 190px 19px 190px;
   color: #3F5D45;
   margin-bottom: 40px;
@@ -550,6 +553,12 @@ a {
 @media (max-width: 768px) {
   .main .send {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main .send {
+    margin-bottom: 0px;
   }
 }
 
@@ -580,6 +589,7 @@ a {
 
 .main .buyList .costList .total {
   font-size: 20px;
+  line-height: 28px;
   font-weight: bold;
 }
 
@@ -661,6 +671,12 @@ a {
 @media (max-width: 768px) {
   .main .infoInput {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    margin-bottom: 0px;
   }
 }
 /*# sourceMappingURL=checkOut.css.map */
